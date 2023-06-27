@@ -1,0 +1,128 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background-color: hsl(30, 38%, 92%);
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* THE MAIN CONTAINER */
+.main-container {
+   height: 35rem;
+   width: 45rem;
+   border-radius: 1rem;
+   overflow: hidden;
+   display: flex;
+}
+
+/* LEFT PART */
+#photo {
+   height: 100%;
+   width: 50%;
+   background-image: url(./images/image-product-desktop.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+/* RIGHT PART */
+#text {
+   height: 100%;
+   width: 50%;
+   background-color: whitesmoke;
+   padding: 2.4rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+.monserrat {
+   font-family: 'Montserrat', sans-serif;
+   color: gray;
+   
+}
+#gabrielle{
+   font-size: 2.5rem;
+   line-height: 2.6rem;
+}
+#perfume-text {
+   line-height: 1.8rem;
+   font-size: 1.1rem;
+}
+.price {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   color: #3d8168;
+ }
+
+#old-price{
+   font-size: 1.1rem;
+   font-family: 'Montserrat', sans-serif;
+   color: gray;
+   text-decoration: line-through;
+}
+#new-price {
+   font-size: 2.5rem;
+}
+.fraunces{
+    font-family: 'Fraunces', serif;
+
+ }
+ .cart {
+   width: 100%;
+   height: 4rem;
+   background-color: #3d8168;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   gap: 8px;
+
+}
+.cart:hover {
+   background-color: #2f6551;
+   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+}
+.cart > p{
+    color: white;
+
+ }
+
+ /* RESPONSIVENESS */
+ @media screen and (max-width: 750px) {
+   body{
+      padding: 1rem;
+   }
+   .photo{
+      background-image: url(./images/image-product-mobile.jpg);
+   }
+   .main-container{
+      flex-direction: column;
+      height: 45rem;
+      width: 25rem;
+   }
+   #photo{
+      height: 40%;
+      width: 100%;
+   }
+   #text{
+      height: 60%;
+      width: 100%;
+      gap: 1rem;
+      padding: 1rem;
+   }
+   #gabrielle{
+      font-size: 2rem;
+   }
+   #perfume-text {
+      font-size: 1rem;
+   }
+   #new-price {
+      font-size: 2rem;
+   }
+ }
